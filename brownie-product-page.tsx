@@ -1,9 +1,11 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Play, Star, Truck, DollarSign, MapPin } from 'lucide-react'
+import { ChevronDown, Play, Star, Truck, DollarSign, MapPin } from "lucide-react"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
@@ -22,7 +24,7 @@ export default function Component() {
       price: "$40.50",
       originalPrice: "$45.00",
       subText: "10% Off for commenting Vibes",
-      url: "https://bakesalevibes.com/1box10discount",
+      url: "https://bakesalevibes.com/discount/TEN4COMMENT?redirect=/cart/51082491363541:1%3Fcheckout",
     },
     {
       id: 2,
@@ -30,7 +32,7 @@ export default function Component() {
       price: "$61.20",
       originalPrice: "$90.00",
       savings: "You save 24%",
-      url: "https://bakesalevibes.com/2box10discount",
+      url: "https://bakesalevibes.com/discount/TEN4COMMENT?redirect=/cart/51082491363541:2%3Fcheckout",
     },
     {
       id: 3,
@@ -38,7 +40,7 @@ export default function Component() {
       price: "$85.50",
       originalPrice: "$135.00",
       savings: "You save 30%",
-      url: "https://bakesalevibes.com/3box10discount",
+      url: "https://bakesalevibes.com/discount/TEN4COMMENT?redirect=/cart/51082491363541:3%3Fcheckout",
     },
   ]
 
@@ -120,7 +122,11 @@ iframe[id="chat-button"],
         "https://config.gorgias.chat/bundle-loader/01JQSNZSF0ETDCVXMG4DKN0EKX",
         "gorgias-chat-widget-install-v3",
       )
-      await loadScript("https://bundle.5gtb.com/loader.js?g_cvt_id=77c02f1d-ae53-49f2-8bbf-f5da05d5e79f", "bundle-script", true)
+      await loadScript(
+        "https://bundle.5gtb.com/loader.js?g_cvt_id=77c02f1d-ae53-49f2-8bbf-f5da05d5e79f",
+        "bundle-script",
+        true,
+      )
     }
 
     const loadFbclidTracking = () => {
@@ -194,7 +200,13 @@ iframe[id="chat-button"],
                 className={`rounded-lg overflow-hidden ${mainImage === thumb.src ? "border-2" : "border-0"}`}
                 style={{ borderColor: mainImage === thumb.src ? "#531700" : "transparent" }}
               >
-                <Image src={thumb.src || "/placeholder.svg"} alt={thumb.alt} width={70} height={70} className="w-[70px] h-[70px] object-cover" />
+                <Image
+                  src={thumb.src || "/placeholder.svg"}
+                  alt={thumb.alt}
+                  width={70}
+                  height={70}
+                  className="w-[70px] h-[70px] object-cover"
+                />
               </button>
             ))}
           </div>
@@ -284,19 +296,34 @@ iframe[id="chat-button"],
             ADD TO CART
           </Button>
 
-          <div className="flex text-center justify-evenly mb-0 items-center flex-row text-sm font-semibold" style={{ color: "#531700" }}>
+          <div
+            className="flex text-center justify-evenly mb-0 items-center flex-row text-sm font-semibold"
+            style={{ color: "#531700" }}
+          >
             <div className="flex flex-col items-center leading-3 font-sans">
               <Image src="/images/free-shipping-icon.png" alt="Free shipping" width={80} height={80} className="mb-1" />
               <div>Free shipping</div>
               <div>on all orders</div>
             </div>
             <div className="flex flex-col items-center leading-3 font-sans">
-              <Image src="/images/money-back-icon.png" alt="Money back guarantee" width={80} height={80} className="mb-1" />
+              <Image
+                src="/images/money-back-icon.png"
+                alt="Money back guarantee"
+                width={80}
+                height={80}
+                className="mb-1"
+              />
               <div>Money-back</div>
               <div>Guarantee</div>
             </div>
             <div className="flex flex-col items-center leading-3 font-sans">
-              <Image src="/images/ships-42-states-icon.png" alt="Ships to 42 states" width={80} height={80} className="mb-1" />
+              <Image
+                src="/images/ships-42-states-icon.png"
+                alt="Ships to 42 states"
+                width={80}
+                height={80}
+                className="mb-1"
+              />
               <div>Ships to</div>
               <div>42 states</div>
             </div>
@@ -304,7 +331,13 @@ iframe[id="chat-button"],
         </div>
 
         <div className="mb-6 mt-9">
-          <Image src="/images/pouches-on-ice.png" alt="Brownie pouches on ice with charcuterie" width={400} height={200} className="w-full" />
+          <Image
+            src="/images/pouches-on-ice.png"
+            alt="Brownie pouches on ice with charcuterie"
+            width={400}
+            height={200}
+            className="w-full"
+          />
         </div>
 
         <div className="px-6 mb-6">
@@ -312,7 +345,10 @@ iframe[id="chat-button"],
             Relax without Alcohol, Indulge without Guilt
           </h2>
           <div className="space-y-2">
-            <div className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]" style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}>
+            <div
+              className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]"
+              style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}
+            >
               <div className="w-1/5" />
               <div className="w-8 h-8 mr-6 flex-shrink-0" style={{ backgroundColor: "#531700" }} />
               <span className="font-medium text-lg leading-none text-left flex-1" style={{ color: "#531700" }}>
@@ -320,9 +356,15 @@ iframe[id="chat-button"],
               </span>
             </div>
 
-            <div className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]" style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}>
+            <div
+              className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]"
+              style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}
+            >
               <div className="w-1/5" />
-              <div className="w-8 h-8 mr-6 flex-shrink-0 flex items-center justify-center text-2xl font-bold" style={{ color: "#E4A830" }}>
+              <div
+                className="w-8 h-8 mr-6 flex-shrink-0 flex items-center justify-center text-2xl font-bold"
+                style={{ color: "#E4A830" }}
+              >
                 {"⚡"}
               </div>
               <span className="font-medium text-lg leading-none text-left flex-1" style={{ color: "#531700" }}>
@@ -330,7 +372,10 @@ iframe[id="chat-button"],
               </span>
             </div>
 
-            <div className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]" style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}>
+            <div
+              className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]"
+              style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}
+            >
               <div className="w-1/5" />
               <div className="w-8 h-8 mr-6 flex-shrink-0 flex items-center justify-center text-2xl">{"😊"}</div>
               <span className="font-medium text-lg leading-none" style={{ color: "#531700" }}>
@@ -338,7 +383,10 @@ iframe[id="chat-button"],
               </span>
             </div>
 
-            <div className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]" style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}>
+            <div
+              className="flex items-center px-6 py-1.5 rounded-full border-2 min-h-[35px]"
+              style={{ borderColor: "#531700", backgroundColor: "#FFF7E6" }}
+            >
               <div className="w-1/5" />
               <div className="w-8 h-8 mr-6 flex-shrink-0 flex items-center justify-center text-2xl">{"📦"}</div>
               <span className="font-medium text-lg leading-none" style={{ color: "#531700" }}>
@@ -349,11 +397,20 @@ iframe[id="chat-button"],
         </div>
 
         <div className="mb-9 mt-8">
-          <Image src="/images/gardening-gradient.png" alt="Woman gardening with product" width={400} height={200} className="w-full" />
+          <Image
+            src="/images/gardening-gradient.png"
+            alt="Woman gardening with product"
+            width={400}
+            height={200}
+            className="w-full"
+          />
         </div>
 
         <div className="px-6 mb-6 mt-0">
-          <div className="p-4 rounded-2xl border-2 text-center mb-4" style={{ borderColor: "#E4A830", backgroundColor: "#FFF7E6" }}>
+          <div
+            className="p-4 rounded-2xl border-2 text-center mb-4"
+            style={{ borderColor: "#E4A830", backgroundColor: "#FFF7E6" }}
+          >
             <h3 className="font-bold mb-1 text-2xl" style={{ color: "#531700" }}>
               What does Vibes feel like?
             </h3>
@@ -365,9 +422,21 @@ iframe[id="chat-button"],
           <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "375/667" }}>
             {!showVideo ? (
               <div className="relative w-full h-full">
-                <Image src="/images/new-video-thumbnail.png" alt="What does BakeSale Vibes feel like?" width={375} height={667} className="w-full h-full object-cover" />
-                <button onClick={() => setShowVideo(true)} className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: "#E4A830" }}>
+                <Image
+                  src="/images/new-video-thumbnail.png"
+                  alt="What does BakeSale Vibes feel like?"
+                  width={375}
+                  height={667}
+                  className="w-full h-full object-cover"
+                />
+                <button
+                  onClick={() => setShowVideo(true)}
+                  className="absolute inset-0 flex items-center justify-center"
+                >
+                  <div
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "#E4A830" }}
+                  >
                     <Play className="w-6 h-6 text-white ml-1" fill="white" />
                   </div>
                 </button>
@@ -407,13 +476,21 @@ iframe[id="chat-button"],
                   style={{ color: "#531700" }}
                 >
                   <span className="text-lg">{faq.question}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${expandedFaq === index ? "rotate-180" : ""}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${expandedFaq === index ? "rotate-180" : ""}`}
+                  />
                 </button>
                 {expandedFaq === index && (
                   <div className="px-3 py-3 text-sm border-t" style={{ color: "#531700", borderColor: "#E4A830" }}>
                     {faq.answer === "image" ? (
                       <div className="flex justify-center">
-                        <Image src="/images/nutritional-info.png" alt="Nutrition Facts" width={300} height={400} className="max-w-full h-auto" />
+                        <Image
+                          src="/images/nutritional-info.png"
+                          alt="Nutrition Facts"
+                          width={300}
+                          height={400}
+                          className="max-w-full h-auto"
+                        />
                       </div>
                     ) : (
                       <div className="whitespace-pre-line">{faq.answer}</div>
@@ -442,16 +519,29 @@ iframe[id="chat-button"],
         </div>
 
         <div className="relative mt-24 mb-6 pt-9">
-          <Image src="/images/ways-to-wind-down.png" alt="Woman relaxing with art and product" width={400} height={500} className="w-full" />
+          <Image
+            src="/images/ways-to-wind-down.png"
+            alt="Woman relaxing with art and product"
+            width={400}
+            height={500}
+            className="w-full"
+          />
           <div className="absolute top-0 left-0 right-0 p-6 pb-6 pt-0">
             <div className="text-center">
-              <h3 className="font-bold mb-2 leading-tight text-center font-sans text-3xl leading-7" style={{ color: "#531700" }}>
+              <h3
+                className="font-bold mb-2 leading-tight text-center font-sans text-3xl leading-7"
+                style={{ color: "#531700" }}
+              >
                 Your New Favorite
                 <br />
                 Way to Wind Down
               </h3>
-              <p className="text-base leading-relaxed max-w-[280px] mx-auto text-center font-sans leading-5" style={{ color: "#531700" }}>
-                A soft, chocolatey lift that starts in 10 minutes, lasts 90 minutes, and fades with zero fog or hangover.
+              <p
+                className="text-base leading-relaxed max-w-[280px] mx-auto text-center font-sans leading-5"
+                style={{ color: "#531700" }}
+              >
+                A soft, chocolatey lift that starts in 10 minutes, lasts 90 minutes, and fades with zero fog or
+                hangover.
               </p>
             </div>
           </div>
@@ -459,27 +549,30 @@ iframe[id="chat-button"],
 
         <section className="px-6 mb-9">
           <h2 className="text-2xl font-bold text-[#531700] text-center mb-6">What People are Saying:</h2>
-          {[["Emma T.", "I love the fact that this will replace a glass of wine or a glass of beer at the end of the day to calm your mind and body."],
+          {[
+            [
+              "Emma T.",
+              "I love the fact that this will replace a glass of wine or a glass of beer at the end of the day to calm your mind and body.",
+            ],
             ["Alex J.", "This is so so good to just decompress. It really just goes with your mood."],
             ["Maya S.", "Wait 10 minutes and you are relaxed and ready to go. What better way to end the work week?"],
-            ["Ryan P.", "Honey this is just perfect for unwinding after a day like today. I needed this"]].map(
-            ([name, text], i) => (
-              <div key={i} className="bg-white rounded-lg border-2 border-[#EDA21C] p-4 mb-4">
-                <div className="flex items-center mb-2">
-                  <div className="w-10 h-10 bg-[#FFF7E6] rounded-full mr-3" />
-                  <div>
-                    <p className="font-medium text-[#531700]">{name}</p>
-                    <div className="flex">
-                      {[1, 2, 3, 4, 5].map((s) => (
-                        <Star key={s} className="w-4 h-4 fill-[#EDA21C] text-[#EDA21C]" />
-                      ))}
-                    </div>
+            ["Ryan P.", "Honey this is just perfect for unwinding after a day like today. I needed this"],
+          ].map(([name, text], i) => (
+            <div key={i} className="bg-white rounded-lg border-2 border-[#EDA21C] p-4 mb-4">
+              <div className="flex items-center mb-2">
+                <div className="w-10 h-10 bg-[#FFF7E6] rounded-full mr-3" />
+                <div>
+                  <p className="font-medium text-[#531700]">{name}</p>
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-4 h-4 fill-[#EDA21C] text-[#EDA21C]" />
+                    ))}
                   </div>
                 </div>
-                <p className="text-sm text-[#531700] leading-relaxed">{"\"" + text + "\""}</p>
               </div>
-            ),
-          )}
+              <p className="text-sm text-[#531700] leading-relaxed">{'"' + text + '"'}</p>
+            </div>
+          ))}
         </section>
 
         <section className="px-6 mb-9">
@@ -501,7 +594,10 @@ iframe[id="chat-button"],
             >
               Shop Now
             </button>
-            <div className="flex text-center justify-evenly mb-0 items-center flex-row text-sm pt-2" style={{ color: "#531700", fontWeight: 600 }}>
+            <div
+              className="flex text-center justify-evenly mb-0 items-center flex-row text-sm pt-2"
+              style={{ color: "#531700", fontWeight: 600 }}
+            >
               <InfoIcon label="Free shipping" sub="on all orders">
                 <Truck className="w-8 h-8" style={{ color: "#531700" }} />
               </InfoIcon>
@@ -555,7 +651,13 @@ iframe[id="chat-button"],
 function Tile({ src, label }: { src: string; label: string }) {
   return (
     <div className="text-center">
-      <Image src={src || "/placeholder.svg"} alt={label} width={80} height={80} className="w-full aspect-square object-cover rounded-lg mb-2" />
+      <Image
+        src={src || "/placeholder.svg"}
+        alt={label}
+        width={80}
+        height={80}
+        className="w-full aspect-square object-cover rounded-lg mb-2"
+      />
       <div className="text-sm font-sans font-medium" style={{ color: "#531700" }}>
         {label}
       </div>
@@ -566,7 +668,10 @@ function Tile({ src, label }: { src: string; label: string }) {
 function InfoIcon({ children, label, sub }: { children: React.ReactNode; label: string; sub: string }) {
   return (
     <div className="flex flex-col items-center leading-tight font-sans">
-      <div className="w-16 h-16 rounded-full mb-2 flex items-center justify-center" style={{ backgroundColor: "#F5E6D3" }}>
+      <div
+        className="w-16 h-16 rounded-full mb-2 flex items-center justify-center"
+        style={{ backgroundColor: "#F5E6D3" }}
+      >
         {children}
       </div>
       <div className="font-semibold">{label}</div>
