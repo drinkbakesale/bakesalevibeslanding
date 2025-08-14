@@ -58,17 +58,17 @@ export default function Component() {
     {
       question: "Is 3mg good for beginners?",
       answer:
-        "Each pouch's friendly dose of 3mg THC is meant to be an easy starting place for new consumers, so it is a relatively low dose.\n\nThat being said, if you are concerned about overdoing it, you can try a little bit at a time, wait 15 minutes or so, and once you have figured out how much it effects you, you can adjust how much you drink accordingly.",
+        "Each pouch's friendly dose of 3mg T-H-C is meant to be an easy starting place for new consumers, so it is a relatively low dose.\n\nThat being said, if you are concerned about overdoing it, you can try a little bit at a time, wait 15 minutes or so, and once you have figured out how much it effects you, you can adjust how much you drink accordingly.",
     },
     {
       question: "How is it legal?",
       answer:
-        "Thanks to the 2018 Farm Bill, products containing less than 0.3% hemp derived THC by weight (like Bakesale Vibes) are Federally Legal. This makes Bakesale Vibes 100% legal to buy and sell online to individuals over the age of 21.",
+        "Thanks to the 2018 Farm Bill, products containing less than 0.3% hemp derived T-H-C by weight (like Bakesale Vibes) are Federally Legal. This makes Bakesale Vibes 100% legal to buy and sell online to individuals over the age of 21.",
     },
     {
       question: "What does it feel like?",
       answer:
-        "Bakesale's friendly dose of 3mg of THC is relaxing, playful, and delightfully uplifting.\n\nFor most people, drinking one pouch worth is roughly the same strength of experience as a glass of wine or a beer.",
+        "Bakesale's friendly dose of 3mg of T-H-C is relaxing, playful, and delightfully uplifting.\n\nFor most people, drinking one pouch worth is roughly the same strength of experience as a glass of wine or a beer.",
     },
     {
       question: "Nutritional Info?",
@@ -77,7 +77,7 @@ export default function Component() {
     {
       question: "Ingredients List",
       answer:
-        "Bakesale Vibes contains Purified Water, Cane Sugar, Vegetable Glycerin, Salt, Gum Acacia, Potassium Sorbate, Sodium Benzoate, Hemp-Derived Delta-9 THC Extract, Hemp-Derived CBD Extract, Natural and Artifical Flavors, Caramel Coloring.",
+        "Bakesale Vibes contains Purified Water, Cane Sugar, Vegetable Glycerin, Salt, Gum Acacia, Potassium Sorbate, Sodium Benzoate, Hemp-Derived Delta-9 T-H-C Extract, Hemp-Derived C-B-D Extract, Natural and Artifical Flavors, Caramel Coloring.",
     },
   ]
 
@@ -172,7 +172,7 @@ iframe[id="chat-button"],
             Brownie-flavored Bliss
           </h1>
           <p className="leading-relaxed font-sans leading-[1.15rem] text-base font-medium" style={{ color: "#531700" }}>
-            A delicious brownie-flavored drink infused with a beginner-friendly 3mg dose of THC
+            A delicious brownie-flavored drink infused with a beginner-friendly 3mg dose of T-H-C
           </p>
         </div>
 
