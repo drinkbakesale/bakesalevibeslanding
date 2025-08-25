@@ -444,7 +444,7 @@ iframe[id="chat-button"],
             ) : (
               <div className="relative w-full h-full">
                 <iframe
-                  src="https://iframe.mediadelivery.net/embed/476692/50670d5e-7946-43a4-b136-ba533dc702f1?autoplay=true&muted=false"
+                  src="https://player.vimeo.com/video/1112971873?autoplay=1&muted=0"
                   loading="lazy"
                   className="w-full h-full border-none"
                   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
