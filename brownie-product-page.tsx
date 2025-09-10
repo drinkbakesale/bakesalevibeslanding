@@ -129,14 +129,6 @@ iframe[id="chat-button"],
       )
     }
 
-    const loadFbclidTracking = () => {
-      try {
-        const urlParams = new URLSearchParams(window.location.search)
-        const fbclid = urlParams.get("fbclid")
-        if (fbclid) sessionStorage.setItem("fbclid", fbclid)
-      } catch {}
-    }
-
     const loadGoogleTagManager = () => {
       try {
         const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9LHLSBR');`
@@ -147,7 +139,6 @@ iframe[id="chat-button"],
     }
 
     loadScripts()
-    loadFbclidTracking()
     loadGoogleTagManager()
 
     return () => {
@@ -282,14 +273,7 @@ iframe[id="chat-button"],
             style={{ backgroundColor: "#E4A830", color: "#531700", height: "40px", fontSize: "16px" }}
             onClick={() => {
               if (selectedOption?.url) {
-                const fbclid = sessionStorage.getItem("fbclid")
-                try {
-                  const url = new URL(selectedOption.url)
-                  if (fbclid) url.searchParams.set("fbclid", fbclid)
-                  window.location.href = url.toString()
-                } catch {
-                  window.location.href = selectedOption.url
-                }
+                window.location.href = selectedOption.url
               }
             }}
           >
